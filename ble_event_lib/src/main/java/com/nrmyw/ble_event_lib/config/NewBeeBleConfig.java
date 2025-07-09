@@ -1,12 +1,13 @@
 package com.nrmyw.ble_event_lib.config;
 
 import android.text.TextUtils;
+
 import com.nrmyw.ble_event_lib.bean.BleDeviceBean;
 
 import java.util.List;
 
-public class HudBleConfig {
-    private static HudBleConfig blueToothGattConfig;
+public class NewBeeBleConfig {
+    private static NewBeeBleConfig blueToothGattConfig;
     private boolean autoConnect ;
     private int mtu;
     private int sendFileMtu;
@@ -20,15 +21,15 @@ public class HudBleConfig {
 
 
 
-    private HudBleConfig(){
+    private NewBeeBleConfig(){
 
     }
 
-    public static HudBleConfig getInstance(){
+    public static NewBeeBleConfig getInstance(){
         if(null==blueToothGattConfig){
-            synchronized (HudBleConfig.class){
+            synchronized (NewBeeBleConfig.class){
                 if(null==blueToothGattConfig){
-                    blueToothGattConfig=new HudBleConfig();
+                    blueToothGattConfig=new NewBeeBleConfig();
                 }
             }
         }
@@ -142,7 +143,6 @@ public class HudBleConfig {
         if(null==bleDeviceList||bleDeviceList.size()==0){
             return null;
         }
-
         for(BleDeviceBean bleDevice:bleDeviceList){
             if(!TextUtils.isEmpty(bleDevice.getDeviceTitle())&&bleName.contains(bleDevice.getDeviceTitle())){
                 if(TextUtils.isEmpty(bleDevice.getDeviceBody())||bleName.contains(bleDevice.getDeviceBody())){
