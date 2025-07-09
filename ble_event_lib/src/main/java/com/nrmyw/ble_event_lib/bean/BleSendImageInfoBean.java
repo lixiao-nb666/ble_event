@@ -30,6 +30,9 @@ public class BleSendImageInfoBean implements Serializable {
     }
 
     public int getMaxW() {
+        if(maxW==0){
+            return 200;
+        }
         return maxW;
     }
 
@@ -38,6 +41,9 @@ public class BleSendImageInfoBean implements Serializable {
     }
 
     public int getMaxH() {
+        if(maxH==0){
+            return 260;
+        }
         return maxH;
     }
 
@@ -54,6 +60,9 @@ public class BleSendImageInfoBean implements Serializable {
     }
 
     public BleSendBitmapQualityType getBitmapQualityType() {
+        if(null==bitmapQualityType){
+            return BleSendBitmapQualityType.LOW;
+        }
         return bitmapQualityType;
     }
 
