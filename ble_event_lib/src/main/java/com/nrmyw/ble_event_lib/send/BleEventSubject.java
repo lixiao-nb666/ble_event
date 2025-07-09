@@ -3,6 +3,7 @@ package com.nrmyw.ble_event_lib.send;//package com.newbee.ble_lib.event.send;
 
 import android.graphics.Bitmap;
 
+import com.nrmyw.ble_event_lib.bean.BleSendImageInfoBean;
 import com.nrmyw.ble_event_lib.type.BleSendBitmapQualityType;
 
 
@@ -37,5 +38,5 @@ public interface BleEventSubject {
     public void sendImageIndexCmd(int index,byte[] bytes);
 
     //发送图标
-    public void sendImage(Bitmap bitmap, BleSendBitmapQualityType bitmapQualityType);
+    public void sendImage(BleSendImageInfoBean sendImageInfoBean, BleSendBitmapQualityType bitmapQualityType);
 }

@@ -15,8 +15,7 @@ public class NewBeeBleConfig {
     private String writeID ;
     private String noticeID ;
     private boolean disconnectAutoConnect;
-    private int imageW=200;
-    private int imageH=260;
+
     private List<BleDeviceBean> bleDeviceList;
 
 
@@ -118,21 +117,7 @@ public class NewBeeBleConfig {
         this.disconnectAutoConnect = disconnectAutoConnect;
     }
 
-    public int getImageW() {
-        return imageW;
-    }
 
-    public void setImageW(int imageW) {
-        this.imageW = imageW;
-    }
-
-    public int getImageH() {
-        return imageH;
-    }
-
-    public void setImageH(int imageH) {
-        this.imageH = imageH;
-    }
 
 
 

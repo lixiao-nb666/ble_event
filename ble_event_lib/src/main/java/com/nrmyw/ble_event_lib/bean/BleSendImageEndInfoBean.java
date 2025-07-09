@@ -3,6 +3,8 @@ package com.nrmyw.ble_event_lib.bean;
 import java.io.Serializable;
 
 public class BleSendImageEndInfoBean implements Serializable {
+    private int type;//图片种类标识
+    private String name;//可以为空
     private int w;
     private int h;
     private int size;
@@ -52,10 +54,28 @@ public class BleSendImageEndInfoBean implements Serializable {
         this.size = size;
     }
 
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     @Override
     public String toString() {
-        return "SendImageEndInfoBean{" +
-                "w=" + w +
+        return "BleSendImageEndInfoBean{" +
+                "type=" + type +
+                ", name='" + name + '\'' +
+                ", w=" + w +
                 ", h=" + h +
                 ", size=" + size +
                 ", index=" + index +
