@@ -1,5 +1,7 @@
 package com.nrmyw.ble_event_lib.bean;
 
+import android.graphics.Bitmap;
+
 import java.io.Serializable;
 
 public class BleSendImageInfoBean implements Serializable {
@@ -7,7 +9,7 @@ public class BleSendImageInfoBean implements Serializable {
     private String name;//可以为空
     private int maxW;//显示最大宽
     private int maxH;//显示最大长
-
+    private Bitmap bitmap;
     public int getType() {
         return type;
     }
@@ -38,6 +40,14 @@ public class BleSendImageInfoBean implements Serializable {
 
     public void setMaxH(int maxH) {
         this.maxH = maxH;
+    }
+
+    public Bitmap getBitmap() {
+        return bitmap;
+    }
+
+    public void setBitmap(Bitmap bitmap) {
+        this.bitmap = bitmap;
     }
 
     @Override
