@@ -30,5 +30,5 @@ public interface BleEventObserver {
     public void sendImageIndexCmd(int index,byte[] bytes);
 
     //发送图标
-    public void sendImage(BleSendImageInfoBean sendImageInfoBean, BleSendBitmapQualityType bitmapQualityType);
+    public void sendImage(BleSendImageInfoBean sendImageInfoBean);
 }

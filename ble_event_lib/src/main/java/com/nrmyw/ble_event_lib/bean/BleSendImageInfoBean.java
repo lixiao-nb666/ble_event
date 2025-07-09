@@ -2,6 +2,8 @@ package com.nrmyw.ble_event_lib.bean;
 
 import android.graphics.Bitmap;
 
+import com.nrmyw.ble_event_lib.type.BleSendBitmapQualityType;
+
 import java.io.Serializable;
 
 public class BleSendImageInfoBean implements Serializable {
@@ -10,6 +12,7 @@ public class BleSendImageInfoBean implements Serializable {
     private int maxW;//显示最大宽
     private int maxH;//显示最大长
     private Bitmap bitmap;
+    private BleSendBitmapQualityType bitmapQualityType;
     public int getType() {
         return type;
     }
@@ -48,6 +51,14 @@ public class BleSendImageInfoBean implements Serializable {
 
     public void setBitmap(Bitmap bitmap) {
         this.bitmap = bitmap;
+    }
+
+    public BleSendBitmapQualityType getBitmapQualityType() {
+        return bitmapQualityType;
+    }
+
+    public void setBitmapQualityType(BleSendBitmapQualityType bitmapQualityType) {
+        this.bitmapQualityType = bitmapQualityType;
     }
 
     @Override

@@ -77,9 +77,9 @@ public class BleEventSubscriptionSubject implements BleEventSubject {
     }
 
     @Override
-    public void sendImage(BleSendImageInfoBean sendImageInfoBean, BleSendBitmapQualityType bitmapQualityType) {
+    public void sendImage(BleSendImageInfoBean sendImageInfoBean) {
         for (BleEventObserver observer:observers){
-            observer.sendImage(sendImageInfoBean,bitmapQualityType);
+            observer.sendImage(sendImageInfoBean);
         }
     }
 
