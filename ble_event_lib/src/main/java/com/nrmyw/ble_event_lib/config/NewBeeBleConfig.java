@@ -9,8 +9,8 @@ import java.util.List;
 public class NewBeeBleConfig {
     private static NewBeeBleConfig blueToothGattConfig;
     private boolean autoConnect ;
-    private int mtu;
-    private int sendFileMtu;
+    private int mtu=517;
+    private int realMtu;
     private String serviceID ;
     private String writeID ;
     private String noticeID ;
@@ -50,7 +50,6 @@ public class NewBeeBleConfig {
     public void init(  boolean autoConnect , int mtu,String serviceID , String writeID , String noticeID , List<BleDeviceBean> bleDeviceList){
         this.autoConnect=autoConnect;
         this.mtu=mtu;
-        sendFileMtu=mtu-5;
         this.serviceID=serviceID;
         this.writeID=writeID;
         this.noticeID=noticeID;
@@ -60,9 +59,8 @@ public class NewBeeBleConfig {
 
 
 
-    public void setMtu(int mtu) {
-        this.mtu = mtu;
-        sendFileMtu=mtu-5;
+    public void setRealMtu(int mtu) {
+       this.realMtu=mtu;
     }
 
     public void setServiceID(String serviceID) {
@@ -87,15 +85,17 @@ public class NewBeeBleConfig {
 
 
 
-    public int getMtu() {
-        return mtu;
+//    public int getMtu() {
+//        return mtu;
+//    }
+
+
+    public int getRealMtu() {
+        if(realMtu==0){
+            return mtu;
+        }
+        return realMtu;
     }
-
-    public int getSendFileMtu() {
-        return sendFileMtu;
-    }
-
-
 
     public String getServiceID() {
         return serviceID;
