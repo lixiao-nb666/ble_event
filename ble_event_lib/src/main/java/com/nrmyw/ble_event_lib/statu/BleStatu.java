@@ -14,6 +14,7 @@ public enum BleStatu {
     STATE_ON(R.string.ble_statu_state_on),//已经打开
     STATE_OFF(R.string.ble_statu_state_off),//关闭
     CONNECTING(R.string.ble_statu_connecting),//连接中
+    CONNECT_ERR(R.string.ble_statu_connecting_err),//连接异常
     CONNECTED(R.string.ble_statu_connected),//连接成功
     DISCONNECTED(R.string.ble_statu_disconnected),//断开连接
     CAN_SEND_DATA(R.string.ble_statu_can_send_data),//现在能发送数据-不带数据
@@ -21,7 +22,6 @@ public enum BleStatu {
     RETRUN_BYTES(R.string.ble_statu_retrun_bytes),//蓝牙返回值
     SEND_IMAGE_START(R.string.ble_statu_send_image_start),//蓝牙准备开始发送图片
     SEND_IMAGE_END(R.string.ble_statu_send_image_end),//蓝牙发送图片结束
-
     ;
     int strId;
     BleStatu(int strId){
