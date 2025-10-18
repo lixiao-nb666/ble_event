@@ -90,6 +90,10 @@ public class NewBeeBleConfig {
 //    }
 
 
+    public int getMtu() {
+        return mtu;
+    }
+
     public int getRealMtu() {
         if(realMtu==0){
             return mtu;
