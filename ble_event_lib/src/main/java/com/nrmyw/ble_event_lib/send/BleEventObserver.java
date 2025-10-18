@@ -1,10 +1,9 @@
 package com.nrmyw.ble_event_lib.send;//package com.newbee.ble_lib.event.send;
 
 
-import android.graphics.Bitmap;
 
 import com.nrmyw.ble_event_lib.bean.BleSendImageInfoBean;
-import com.nrmyw.ble_event_lib.type.BleSendBitmapQualityType;
+
 
 
 /**

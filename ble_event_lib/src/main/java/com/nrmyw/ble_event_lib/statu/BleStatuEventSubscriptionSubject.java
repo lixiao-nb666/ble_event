@@ -37,9 +37,9 @@ public class BleStatuEventSubscriptionSubject implements BleStatuEventSubject {
     }
 
     @Override
-    public void sendBleStatu(BleStatu bleStatu,int rsId,Object object) {
+    public void sendBleStatu(BleStatu bleStatu, Object... objects) {
         for (BleStatuEventObserver observer:observers){
-            observer.sendBleStatu(bleStatu,rsId,object);
+            observer.sendBleStatu(bleStatu,objects);
         }
     }
 

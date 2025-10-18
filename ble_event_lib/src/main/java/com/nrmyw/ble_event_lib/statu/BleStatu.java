@@ -14,7 +14,7 @@ public enum BleStatu {
     STATE_ON(R.string.ble_statu_state_on),//已经打开
     STATE_OFF(R.string.ble_statu_state_off),//关闭
     CONNECTING(R.string.ble_statu_connecting),//连接中
-    CONNECT_ERR(R.string.ble_statu_connecting_err),//连接异常
+    CONNECTING_ERR(R.string.ble_statu_connecting_err),//连接异常
     CONNECTED(R.string.ble_statu_connected),//连接成功
     DISCONNECTED(R.string.ble_statu_disconnected),//断开连接
     CAN_SEND_DATA(R.string.ble_statu_can_send_data),//现在能发送数据-不带数据

@@ -21,6 +21,6 @@ public interface BleStatuEventSubject {
     public void detach(BleStatuEventObserver observer);
 
 
-    public  void sendBleStatu(BleStatu bleStatu,int rsId,Object object);
+    public  void sendBleStatu(BleStatu bleStatu,Object... objects);
 
 }
