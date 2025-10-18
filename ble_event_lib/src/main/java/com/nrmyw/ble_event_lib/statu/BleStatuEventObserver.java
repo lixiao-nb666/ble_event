@@ -8,7 +8,7 @@ package com.nrmyw.ble_event_lib.statu;
 
 public interface BleStatuEventObserver {
 
-    public  void sendBleStatu(BleStatu bleStatu,Object... objects);
+    public  void sendBleStatu(BleStatu bleStatu,int rsId,Object object);
 
 
 
