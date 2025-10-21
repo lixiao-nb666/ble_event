@@ -22,6 +22,7 @@ public enum BleStatu {
     RETRUN_BYTES(R.string.ble_statu_retrun_bytes),//蓝牙返回值
     SEND_IMAGE_START(R.string.ble_statu_send_image_start),//蓝牙准备开始发送图片
     SEND_IMAGE_END(R.string.ble_statu_send_image_end),//蓝牙发送图片结束
+    SEND_IMAGE_DATA_END(R.string.ble_statu_send_image_end),
     ;
     int strId;
     BleStatu(int strId){
