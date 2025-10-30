@@ -2,6 +2,7 @@ package com.nrmyw.ble_event_lib.send;//package com.newbee.ble_lib.event.send;
 
 
 import android.graphics.Bitmap;
+import android.util.Log;
 
 
 import com.nrmyw.ble_event_lib.bean.BleSendImageInfoBean;
@@ -79,6 +80,7 @@ public class BleEventSubscriptionSubject implements BleEventSubject {
     @Override
     public void sendImage(BleSendImageInfoBean sendImageInfoBean) {
         for (BleEventObserver observer:observers){
+
             observer.sendImage(sendImageInfoBean);
         }
     }
