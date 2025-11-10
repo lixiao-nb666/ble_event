@@ -1,12 +1,14 @@
 <resources>
     <string name="ble_statu_none">蓝牙：未知</string>
     <string name="ble_statu_run_err">蓝牙：运行错误</string>
+    <string name="ble_statu_init">蓝牙：初始化中</string>
     <string name="ble_statu_can_not_use">蓝牙：系统不能使用</string>
     <string name="ble_statu_manager_can_not_use">蓝牙：系统管理器不能使用</string>
     <string name="ble_statu_adapter_can_not_use">蓝牙：系统适配器不能使用</string>
     <string name="ble_statu_opening">蓝牙：打开中...</string>
     <string name="ble_statu_state_on">蓝牙：已打开</string>
     <string name="ble_statu_state_off">蓝牙：已关闭，请打开</string>
+    <string name="ble_statu_searching">蓝牙：搜索中</string>
     <string name="ble_statu_connecting">蓝牙：连接中...</string>
 
     <string name="ble_statu_connecting_err">蓝牙：连接失败...</string>

@@ -1,12 +1,14 @@
 <resources>
     <string name="ble_statu_none">Bluetooth：unknown</string>
     <string name="ble_statu_run_err">Bluetooth：run-time error</string>
+    <string name="ble_statu_init">Bluetooth：Init</string>
     <string name="ble_statu_can_not_use">Bluetooth：The system is not usable</string>
     <string name="ble_statu_manager_can_not_use">Bluetooth：The system manager cannot be used</string>
     <string name="ble_statu_adapter_can_not_use">Bluetooth：The system adapter cannot be used</string>
     <string name="ble_statu_opening">Bluetooth：opening...</string>
     <string name="ble_statu_state_on">Bluetooth：on</string>
     <string name="ble_statu_state_off">Bluetooth：off,please open</string>
+    <string name="ble_statu_searching">Bluetooth：Searching</string>
     <string name="ble_statu_connecting">Bluetooth：connecting...</string>
 
     <string name="ble_statu_connecting_err">Bluetooth：connection fail...</string>

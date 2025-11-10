@@ -1,12 +1,14 @@
 <resources>
     <string name="ble_statu_none">Bluetooth：알 수 없는 상태</string>
     <string name="ble_statu_run_err">Bluetooth：실행 오류</string>
+    <string name="ble_statu_init">Bluetooth：Init</string>
     <string name="ble_statu_can_not_use">Bluetooth：시스템이 사용할 수 없습니다</string>
     <string name="ble_statu_manager_can_not_use">Bluetooth：시스템 관리자를 사용할 수 없습니다</string>
     <string name="ble_statu_adapter_can_not_use">Bluetooth：시스템 어댑터를 사용할 수 없습니다</string>
     <string name="ble_statu_opening">Bluetooth：여는 중...</string>
     <string name="ble_statu_state_on">Bluetooth：열려 있음</string>
     <string name="ble_statu_state_off">Bluetooth：닫혔습니다. 열어 주십시오</string>
+    <string name="ble_statu_searching">Bluetooth：Searching</string>
     <string name="ble_statu_connecting">Bluetooth：연결 중...</string>
     <string name="ble_statu_connecting_err">Bluetooth：연결 실패...</string>
     <string name="ble_statu_connected">Bluetooth：연결되었음</string>
