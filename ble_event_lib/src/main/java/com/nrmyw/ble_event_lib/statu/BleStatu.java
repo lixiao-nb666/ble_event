@@ -10,11 +10,11 @@ public enum BleStatu {
 //    BLE_CAN_NOT_USE(R.string.ble_statu_can_not_use),//系统蓝牙不能使用
 //    BLE_MANAGER_CAN_NOT_USE(R.string.ble_statu_manager_can_not_use),//系统蓝牙管理器不能使用
 //    BLE_ADAPTER_CAN_NOT_USE(R.string.ble_statu_adapter_can_not_use),//系统蓝牙适配器不能使用
-    INIT(),//初始化中
+    INIT(R.string.ble_statu_init),//初始化中
     OPENING(R.string.ble_statu_opening),//打开中
     STATE_ON(R.string.ble_statu_state_on),//已经打开
     STATE_OFF(R.string.ble_statu_state_off),//关闭
-    SEARCHING(R.string.searc),//搜索中
+    SEARCHING(R.string.ble_statu_searching),//搜索中
     CONNECTING(R.string.ble_statu_connecting),//连接中
     CONNECTING_ERR(R.string.ble_statu_connecting_err),//连接异常
     CONNECTED(R.string.ble_statu_connected),//连接成功
