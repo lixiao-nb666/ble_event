@@ -16,6 +16,7 @@ public enum BleStatu {
     STATE_OFF(R.string.ble_statu_state_off),//关闭
     SEARCHING(R.string.ble_statu_searching),//搜索中
     CONNECTING(R.string.ble_statu_connecting),//连接中
+    FOUND_BLE_DEVICE(R.string.ble_statu_found_ble_device),//搜索到设备
     CONNECTING_ERR(R.string.ble_statu_connecting_err),//连接异常
     CONNECTED(R.string.ble_statu_connected),//连接成功
     DISCONNECTED(R.string.ble_statu_disconnected),//断开连接

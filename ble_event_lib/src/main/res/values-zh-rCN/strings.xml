@@ -10,7 +10,7 @@
     <string name="ble_statu_state_off">蓝牙：已关闭，请打开</string>
     <string name="ble_statu_searching">蓝牙：搜索中</string>
     <string name="ble_statu_connecting">蓝牙：连接中...</string>
-
+    <string name="ble_statu_found_ble_device">蓝牙：找到蓝牙设备</string>
     <string name="ble_statu_connecting_err">蓝牙：连接失败...</string>
     <string name="ble_statu_connected">蓝牙：已连接</string>
     <string name="ble_statu_disconnected">蓝牙：连接已断开...请重连</string>

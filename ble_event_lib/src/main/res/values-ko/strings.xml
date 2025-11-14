@@ -10,6 +10,7 @@
     <string name="ble_statu_state_off">Bluetooth：닫혔습니다. 열어 주십시오</string>
     <string name="ble_statu_searching">Bluetooth：Searching</string>
     <string name="ble_statu_connecting">Bluetooth：연결 중...</string>
+    <string name="ble_statu_found_ble_device">Bluetooth：found ble device</string>
     <string name="ble_statu_connecting_err">Bluetooth：연결 실패...</string>
     <string name="ble_statu_connected">Bluetooth：연결되었음</string>
     <string name="ble_statu_disconnected">Bluetooth：연결이 끊겼습니다...다시 연결해 주십시오</string>
