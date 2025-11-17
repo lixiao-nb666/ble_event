@@ -7,7 +7,9 @@ public class BleDeviceBean implements Serializable {
     private int deviceType;
     private String deviceTitle;
     private String deviceBody;
-    private String ManufacturerSpecificData;
+
+    private int manufacturerSpecificId;
+    private String manufacturerSpecificData;
 
     private String bleName;
 
@@ -44,13 +46,6 @@ public class BleDeviceBean implements Serializable {
         this.deviceBody = deviceBody;
     }
 
-    public String getManufacturerSpecificData() {
-        return ManufacturerSpecificData;
-    }
-
-    public void setManufacturerSpecificData(String manufacturerSpecificData) {
-        ManufacturerSpecificData = manufacturerSpecificData;
-    }
 
 
     public String getBleName() {
@@ -69,6 +64,22 @@ public class BleDeviceBean implements Serializable {
         this.pairFuntionType = pairFuntionType;
     }
 
+    public int getManufacturerSpecificId() {
+        return manufacturerSpecificId;
+    }
+
+    public void setManufacturerSpecificId(int manufacturerSpecificId) {
+        this.manufacturerSpecificId = manufacturerSpecificId;
+    }
+
+    public String getManufacturerSpecificData() {
+        return manufacturerSpecificData;
+    }
+
+    public void setManufacturerSpecificData(String manufacturerSpecificData) {
+        this.manufacturerSpecificData = manufacturerSpecificData;
+    }
+
     @Override
     public String toString() {
         return "BleDeviceBean{" +
@@ -76,8 +87,10 @@ public class BleDeviceBean implements Serializable {
                 ", deviceType=" + deviceType +
                 ", deviceTitle='" + deviceTitle + '\'' +
                 ", deviceBody='" + deviceBody + '\'' +
-                ", ManufacturerSpecificData='" + ManufacturerSpecificData + '\'' +
+                ", manufacturerSpecificId=" + manufacturerSpecificId +
+                ", manufacturerSpecificData='" + manufacturerSpecificData + '\'' +
                 ", bleName='" + bleName + '\'' +
+                ", pairFuntionType=" + pairFuntionType +
                 '}';
     }
 }
