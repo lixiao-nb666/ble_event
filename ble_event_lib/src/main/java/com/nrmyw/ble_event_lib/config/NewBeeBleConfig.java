@@ -1,9 +1,11 @@
 package com.nrmyw.ble_event_lib.config;
 
+import android.bluetooth.le.ScanRecord;
 import android.text.TextUtils;
 
 import com.nrmyw.ble_event_lib.bean.BleDeviceBean;
 import com.nrmyw.ble_event_lib.bean.BlePairFuntionType;
+import com.nrmyw.ble_event_lib.util.BleByteUtil;
 
 import java.util.List;
 
@@ -134,32 +136,77 @@ public class NewBeeBleConfig {
             return null;
         }
         for(BleDeviceBean bleDevice:bleDeviceList){
-            if(!TextUtils.isEmpty(bleDevice.getDeviceTitle())&&bleName.contains(bleDevice.getDeviceTitle())){
-                if(TextUtils.isEmpty(bleDevice.getDeviceBody())||bleName.contains(bleDevice.getDeviceBody())){
-                    //有名字只需要名字匹配即可,没有的话，后面也要匹配上
-                    bleDevice.setPairFuntionType(BlePairFuntionType.NAME);
-                    return bleDevice;
-                }
+            if(chechBleDeviceUseName(bleDevice,bleName)){
+                return bleDevice;
             }
+
         }
         return null;
     }
 
-    public BleDeviceBean checkBleManufacturerString(String manufacturerString){
-        if(TextUtils.isEmpty(manufacturerString)){
+    private boolean chechBleDeviceUseName(BleDeviceBean bleDevice,String bleName){
+        if(!TextUtils.isEmpty(bleDevice.getDeviceTitle())&&bleName.contains(bleDevice.getDeviceTitle())){
+            if(TextUtils.isEmpty(bleDevice.getDeviceBody())||bleName.contains(bleDevice.getDeviceBody())){
+                //有名字只需要名字匹配即可,没有的话，后面也要匹配上
+                bleDevice.setPairFuntionType(BlePairFuntionType.NAME);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private boolean chechBleDeviceUsetManufacturerSpecificData(BleDeviceBean bleDevice,ScanRecord record){
+        if(!TextUtils.isEmpty(bleDevice.getManufacturerSpecificData())&&bleDevice.getManufacturerSpecificId()>0){
+            byte[] manufacturerBytes= record.getManufacturerSpecificData(bleDevice.getManufacturerSpecificId());
+            if(null!=manufacturerBytes&&manufacturerBytes.length>0){
+                String manufacturerString= BleByteUtil.parseByte2HexStr(manufacturerBytes);
+                if(!TextUtils.isEmpty(manufacturerString)&&manufacturerString.equals(bleDevice.getManufacturerSpecificData())){
+                    bleDevice.setPairFuntionType(BlePairFuntionType.MANUFACTURER);
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public BleDeviceBean checkBleScanRecord(ScanRecord record){
+
+        if(null==record){
+            return null;
+        }
+        String bleName=record.getDeviceName();
+        if(TextUtils.isEmpty(bleName)){
             return null;
         }
         if(null==bleDeviceList||bleDeviceList.size()==0){
             return null;
         }
         for(BleDeviceBean bleDevice:bleDeviceList){
-            if(!TextUtils.isEmpty(bleDevice.getManufacturerSpecificData())&&manufacturerString.equals(manufacturerString)){
-                bleDevice.setPairFuntionType(BlePairFuntionType.MANUFACTURER);
+            if(chechBleDeviceUsetManufacturerSpecificData(bleDevice,record)){
+                return bleDevice;
+            }
+            if(chechBleDeviceUseName(bleDevice,bleName)){
                 return bleDevice;
             }
         }
         return null;
     }
+
+//    public BleDeviceBean checkBleManufacturerString(String manufacturerString){
+//        if(TextUtils.isEmpty(manufacturerString)){
+//            return null;
+//        }
+//        if(null==bleDeviceList||bleDeviceList.size()==0){
+//            return null;
+//        }
+//        for(BleDeviceBean bleDevice:bleDeviceList){
+//            if(!TextUtils.isEmpty(bleDevice.getManufacturerSpecificData())&&manufacturerString.equals(manufacturerString)){
+//                bleDevice.setPairFuntionType(BlePairFuntionType.MANUFACTURER);
+//                return bleDevice;
+//            }
+//        }
+//        return null;
+//    }
 
 
 }
