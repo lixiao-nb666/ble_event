@@ -13,6 +13,7 @@ public class BleDeviceBean implements Serializable {
 
     private String bleName;
 
+    private String adress;
     private BlePairFuntionType pairFuntionType;
     public String getDeviceName() {
         return deviceName;
@@ -76,6 +77,14 @@ public class BleDeviceBean implements Serializable {
         return manufacturerSpecificData;
     }
 
+    public String getAdress() {
+        return adress;
+    }
+
+    public void setAdress(String adress) {
+        this.adress = adress;
+    }
+
     public void setManufacturerSpecificData(String manufacturerSpecificData) {
         this.manufacturerSpecificData = manufacturerSpecificData;
     }
@@ -90,6 +99,7 @@ public class BleDeviceBean implements Serializable {
                 ", manufacturerSpecificId=" + manufacturerSpecificId +
                 ", manufacturerSpecificData='" + manufacturerSpecificData + '\'' +
                 ", bleName='" + bleName + '\'' +
+                ", adress='" + adress + '\'' +
                 ", pairFuntionType=" + pairFuntionType +
                 '}';
     }
