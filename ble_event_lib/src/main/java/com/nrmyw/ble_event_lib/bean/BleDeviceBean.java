@@ -7,8 +7,11 @@ public class BleDeviceBean implements Serializable {
     private int deviceType;
     private String deviceTitle;
     private String deviceBody;
+    private String ManufacturerSpecificData;
 
+    private String bleName;
 
+    private BlePairFuntionType pairFuntionType;
     public String getDeviceName() {
         return deviceName;
     }
@@ -41,6 +44,31 @@ public class BleDeviceBean implements Serializable {
         this.deviceBody = deviceBody;
     }
 
+    public String getManufacturerSpecificData() {
+        return ManufacturerSpecificData;
+    }
+
+    public void setManufacturerSpecificData(String manufacturerSpecificData) {
+        ManufacturerSpecificData = manufacturerSpecificData;
+    }
+
+
+    public String getBleName() {
+        return bleName;
+    }
+
+    public void setBleName(String bleName) {
+        this.bleName = bleName;
+    }
+
+    public BlePairFuntionType getPairFuntionType() {
+        return pairFuntionType;
+    }
+
+    public void setPairFuntionType(BlePairFuntionType pairFuntionType) {
+        this.pairFuntionType = pairFuntionType;
+    }
+
     @Override
     public String toString() {
         return "BleDeviceBean{" +
@@ -48,6 +76,8 @@ public class BleDeviceBean implements Serializable {
                 ", deviceType=" + deviceType +
                 ", deviceTitle='" + deviceTitle + '\'' +
                 ", deviceBody='" + deviceBody + '\'' +
+                ", ManufacturerSpecificData='" + ManufacturerSpecificData + '\'' +
+                ", bleName='" + bleName + '\'' +
                 '}';
     }
 }
