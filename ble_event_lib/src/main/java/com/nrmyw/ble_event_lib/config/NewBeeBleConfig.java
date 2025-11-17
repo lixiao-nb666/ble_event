@@ -3,6 +3,7 @@ package com.nrmyw.ble_event_lib.config;
 import android.text.TextUtils;
 
 import com.nrmyw.ble_event_lib.bean.BleDeviceBean;
+import com.nrmyw.ble_event_lib.bean.BlePairFuntionType;
 
 import java.util.List;
 
@@ -136,8 +137,25 @@ public class NewBeeBleConfig {
             if(!TextUtils.isEmpty(bleDevice.getDeviceTitle())&&bleName.contains(bleDevice.getDeviceTitle())){
                 if(TextUtils.isEmpty(bleDevice.getDeviceBody())||bleName.contains(bleDevice.getDeviceBody())){
                     //有名字只需要名字匹配即可,没有的话，后面也要匹配上
+                    bleDevice.setPairFuntionType(BlePairFuntionType.NAME);
                     return bleDevice;
                 }
+            }
+        }
+        return null;
+    }
+
+    public BleDeviceBean checkBleManufacturerString(String manufacturerString){
+        if(TextUtils.isEmpty(manufacturerString)){
+            return null;
+        }
+        if(null==bleDeviceList||bleDeviceList.size()==0){
+            return null;
+        }
+        for(BleDeviceBean bleDevice:bleDeviceList){
+            if(!TextUtils.isEmpty(bleDevice.getManufacturerSpecificData())&&manufacturerString.equals(manufacturerString)){
+                bleDevice.setPairFuntionType(BlePairFuntionType.MANUFACTURER);
+                return bleDevice;
             }
         }
         return null;
