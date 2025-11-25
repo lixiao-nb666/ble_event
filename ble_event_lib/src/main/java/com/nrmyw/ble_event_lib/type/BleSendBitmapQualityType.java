@@ -9,7 +9,7 @@ public enum BleSendBitmapQualityType {
     PROGRESS(1),//进度条专属
     ;
     private int qualityV;//1-100
-    private float zoomScaling=0.6;
+    private float zoomScaling=0.6f;
     private BleSendBitmapQualityType(int qualityV){
         this.qualityV=qualityV;
     }
