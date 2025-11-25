@@ -13,6 +13,7 @@ public class BleSendImageInfoBean implements Serializable {
     private int maxH;//显示最大长
     private Bitmap bitmap;
     private BleSendBitmapQualityType bitmapQualityType;
+
     public int getType() {
         return type;
     }
