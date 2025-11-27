@@ -3,15 +3,20 @@ package com.nrmyw.ble_event_lib.type;
 public enum BleSendBitmapQualityType {
     ULTRA_LOW(6),//超低
     LOW(15),//低
-    DEF(30),//一般
+    DEF(30,1f),//一般
     HIGH(50),//高
-    ULTRA_HIGH(70),//超高
-    PROGRESS(1),//进度条专属
+    ULTRA_HIGH(66,66f),//超高
+    PROGRESS(8,1f),//进度条专属
     ;
     private int qualityV;//1-100
     private float zoomScaling=0.6f;
     private BleSendBitmapQualityType(int qualityV){
         this.qualityV=qualityV;
+    }
+
+    private BleSendBitmapQualityType(int qualityV,float zoomScaling){
+        this.qualityV=qualityV;
+        this.zoomScaling=zoomScaling;
     }
 
     public int getQualityV() {
