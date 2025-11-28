@@ -3,9 +3,9 @@ package com.nrmyw.ble_event_lib.type;
 public enum BleSendBitmapQualityType {
     ULTRA_LOW(6),//超低
     LOW(15),//低
-    DEF(30,1f),//一般
+    DEF(30,0.8f),//一般
     HIGH(50),//高
-    ULTRA_HIGH(66,66f),//超高
+    ULTRA_HIGH(66,0.66f),//超高
     PROGRESS(8,1f),//进度条专属
     ;
     private int qualityV;//1-100
