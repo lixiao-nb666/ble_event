@@ -28,8 +28,8 @@ public enum BleSendBitmapQualityType {
     }
 
     public void setZoomScaling(float zoomScaling) {
-        if(zoomScaling>1){
-            this.zoomScaling=1;
+        if(zoomScaling>1f){
+            this.zoomScaling=1f;
         }else {
             this.zoomScaling = zoomScaling;
         }
@@ -38,6 +38,9 @@ public enum BleSendBitmapQualityType {
     }
 
     public float getZoomScaling() {
+        if(zoomScaling>1f){
+            this.zoomScaling=1f;
+        }
         return zoomScaling;
     }
 }

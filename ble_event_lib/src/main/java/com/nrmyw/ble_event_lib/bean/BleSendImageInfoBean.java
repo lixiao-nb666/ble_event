@@ -14,6 +14,8 @@ public class BleSendImageInfoBean implements Serializable {
     private Bitmap bitmap;
     private BleSendBitmapQualityType bitmapQualityType;
 
+
+
     public int getType() {
         return type;
     }
@@ -71,6 +73,7 @@ public class BleSendImageInfoBean implements Serializable {
         this.bitmapQualityType = bitmapQualityType;
     }
 
+
     @Override
     public String toString() {
         return "BleSendImageInfoBean{" +
@@ -78,6 +81,8 @@ public class BleSendImageInfoBean implements Serializable {
                 ", name='" + name + '\'' +
                 ", maxW=" + maxW +
                 ", maxH=" + maxH +
+                ", bitmap=" + bitmap +
+                ", bitmapQualityType=" + bitmapQualityType +
                 '}';
     }
 }
