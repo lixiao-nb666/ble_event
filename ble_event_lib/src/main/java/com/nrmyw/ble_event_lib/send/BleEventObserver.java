@@ -2,6 +2,7 @@ package com.nrmyw.ble_event_lib.send;//package com.newbee.ble_lib.event.send;
 
 
 
+import com.nrmyw.ble_event_lib.bean.BleSendFileInfoBean;
 import com.nrmyw.ble_event_lib.bean.BleSendImageInfoBean;
 
 
@@ -26,8 +27,12 @@ public interface BleEventObserver {
     public  void sendCmd(byte[] bytes);
 
     //发送图标的开始和结束指令，线程自动处理的时候有回调
-    public void sendImageIndexCmd(int index,byte[] bytes);
+    public void sendBytesIndexCmd(int index,byte[] bytes);
 
     //发送图标
     public void sendImage(BleSendImageInfoBean sendImageInfoBean);
+
+
+    //发送文件
+    public void sendFile(BleSendFileInfoBean sendFileInfoBean);
 }

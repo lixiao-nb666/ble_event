@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.util.Log;
 
 
+import com.nrmyw.ble_event_lib.bean.BleSendFileInfoBean;
 import com.nrmyw.ble_event_lib.bean.BleSendImageInfoBean;
 import com.nrmyw.ble_event_lib.type.BleSendBitmapQualityType;
 
@@ -71,9 +72,9 @@ public class BleEventSubscriptionSubject implements BleEventSubject {
     }
 
     @Override
-    public void sendImageIndexCmd(int index, byte[] bytes) {
+    public void sendBytesIndexCmd(int index, byte[] bytes) {
         for (BleEventObserver observer:observers){
-            observer.sendImageIndexCmd(index,bytes);
+            observer.sendBytesIndexCmd(index,bytes);
         }
     }
 
@@ -85,10 +86,10 @@ public class BleEventSubscriptionSubject implements BleEventSubject {
         }
     }
 
+    @Override
+    public void sendFile(BleSendFileInfoBean sendFileInfoBean) {
 
-
-
-
+    }
 
 
 }
