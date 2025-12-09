@@ -88,7 +88,10 @@ public class BleEventSubscriptionSubject implements BleEventSubject {
 
     @Override
     public void sendFile(BleSendFileInfoBean sendFileInfoBean) {
+        for (BleEventObserver observer:observers){
 
+            observer.sendFile(sendFileInfoBean);
+        }
     }
 
 
