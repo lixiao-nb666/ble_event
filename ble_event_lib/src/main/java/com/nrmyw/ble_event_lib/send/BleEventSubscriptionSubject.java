@@ -7,6 +7,7 @@ import android.util.Log;
 
 import com.nrmyw.ble_event_lib.bean.BleSendFileInfoBean;
 import com.nrmyw.ble_event_lib.bean.BleSendImageInfoBean;
+import com.nrmyw.ble_event_lib.bean.BleSendOtaInfoBean;
 import com.nrmyw.ble_event_lib.type.BleSendBitmapQualityType;
 
 import java.util.ArrayList;
@@ -91,6 +92,13 @@ public class BleEventSubscriptionSubject implements BleEventSubject {
         for (BleEventObserver observer:observers){
 
             observer.sendFile(sendFileInfoBean);
+        }
+    }
+
+    @Override
+    public void sendOta(BleSendOtaInfoBean sendOtaInfoBean) {
+        for (BleEventObserver observer:observers){
+            observer.sendOta(sendOtaInfoBean);
         }
     }
 

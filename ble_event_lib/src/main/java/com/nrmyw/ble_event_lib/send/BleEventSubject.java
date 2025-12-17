@@ -4,7 +4,7 @@ package com.nrmyw.ble_event_lib.send;//package com.newbee.ble_lib.event.send;
 
 import com.nrmyw.ble_event_lib.bean.BleSendFileInfoBean;
 import com.nrmyw.ble_event_lib.bean.BleSendImageInfoBean;
-
+import com.nrmyw.ble_event_lib.bean.BleSendOtaInfoBean;
 
 
 public interface BleEventSubject {
@@ -41,4 +41,6 @@ public interface BleEventSubject {
     public void sendImage(BleSendImageInfoBean sendImageInfoBean);
 
     public void sendFile(BleSendFileInfoBean sendFileInfoBean);
+
+    public void sendOta(BleSendOtaInfoBean sendOtaInfoBean);
 }
