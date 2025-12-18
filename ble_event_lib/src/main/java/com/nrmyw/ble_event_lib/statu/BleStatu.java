@@ -25,7 +25,12 @@ public enum BleStatu {
     RETRUN_BYTES(R.string.ble_statu_retrun_bytes),//蓝牙返回值
     SEND_IMAGE_START(R.string.ble_statu_send_image_start),//蓝牙准备开始发送图片
     SEND_IMAGE_END(R.string.ble_statu_send_image_end),//蓝牙发送图片结束
-    SEND_IMAGE_DATA_END(R.string.ble_statu_send_image_end),
+    SEND_IMAGE_DATA_END(R.string.ble_statu_send_image_data_end),
+
+    SEND_OTA_START(R.string.ble_statu_send_ota_start),//发送OTA开始
+    SEND_OTA_END(R.string.ble_statu_send_ota_end),//发送OTA结束
+    SEND_OTA_ERR(R.string.ble_statu_send_ota_err),//发送OTA错误
+    SEND_OTA_PROGRESS(R.string.ble_statu_send_ota_progress),//发送OTA进度
     ;
     int strId;
     BleStatu(int strId){

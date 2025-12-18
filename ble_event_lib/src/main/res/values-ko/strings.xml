@@ -19,6 +19,11 @@
     <string name="ble_statu_retrun_bytes">Bluetooth：반환 값</string>
     <string name="ble_statu_send_image_start">Bluetooth：그림 보내기 시작</string>
     <string name="ble_statu_send_image_end">Bluetooth：그림 보내기 끝</string>
+    <string name="ble_statu_send_ota_start">Bluetooth：Send ota start</string>
+    <string name="ble_statu_send_ota_end">Bluetooth：Send ota end</string>
+    <string name="ble_statu_send_ota_err">Bluetooth：Send ota err</string>
+    <string name="ble_statu_send_ota_progress">Bluetooth：Send ota progress</string>
+
 
     <string name="ble_statu_user_init">Bluetooth：사용자 초기화 중</string>
     <string name="ble_statu_user_scan">Bluetooth：사용자 검색 중</string>
