@@ -43,4 +43,8 @@ public interface BleEventSubject {
     public void sendFile(BleSendFileInfoBean sendFileInfoBean);
 
     public void sendOta(BleSendOtaInfoBean sendOtaInfoBean);
+
+    public void clearMsg();
+
+    public void clearIndexMsg();
 }

@@ -31,5 +31,6 @@
     <string name="ble_statu_user_send_cmd">蓝牙：用户发送CMD数据</string>
     <string name="ble_statu_user_send_image">蓝牙：用户发送图片</string>
     <string name="ble_statu_user_send_image_cmd_index">蓝牙：用户发送图片的CMD数据</string>
-
+    <string name="ble_clear_msg">蓝牙：清空消息指令</string>
+    <string name="ble_clear_index_msg">蓝牙：清空index消息指令</string>
 </resources>

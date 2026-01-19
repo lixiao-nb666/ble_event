@@ -32,4 +32,6 @@
     <string name="ble_statu_user_send_cmd">Bluetooth：cmd 데이터 전송</string>
     <string name="ble_statu_user_send_image">Bluetooth：사용자가 보낸 그림</string>
     <string name="ble_statu_user_send_image_cmd_index">Bluetooth：cmd 데이터를 전송한다</string>
+    <string name="ble_clear_msg">Bluetooth：Clear msg</string>
+    <string name="ble_clear_index_msg">Bluetooth：Clear index msg</string>
 </resources>

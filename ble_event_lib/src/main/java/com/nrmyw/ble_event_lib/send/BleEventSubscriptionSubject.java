@@ -102,5 +102,19 @@ public class BleEventSubscriptionSubject implements BleEventSubject {
         }
     }
 
+    @Override
+    public void clearMsg() {
+        for (BleEventObserver observer:observers){
+            observer.clearMsg();
+        }
+    }
+
+    @Override
+    public void clearIndexMsg() {
+        for (BleEventObserver observer:observers){
+            observer.clearIndexMsg();
+        }
+    }
+
 
 }

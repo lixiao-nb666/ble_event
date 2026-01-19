@@ -31,4 +31,6 @@
     <string name="ble_statu_user_send_cmd">Bluetooth：The user sends CMD data</string>
     <string name="ble_statu_user_send_image">Bluetooth：User sends a picture</string>
     <string name="ble_statu_user_send_image_cmd_index">Bluetooth：The CMD data of the image sent by the user</string>
+    <string name="ble_clear_msg">Bluetooth：Clear msg</string>
+    <string name="ble_clear_index_msg">Bluetooth：Clear index msg</string>
 </resources>
