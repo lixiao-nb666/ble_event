@@ -30,8 +30,9 @@ public enum BleStatu {
     SEND_OTA_END(R.string.ble_statu_send_ota_end),//发送OTA结束
     SEND_OTA_ERR(R.string.ble_statu_send_ota_err),//发送OTA错误
     SEND_OTA_PROGRESS(R.string.ble_statu_send_ota_progress),//发送OTA进度
-    SEND_IMAGE_ERR_ISRUN()
-
+    SEND_IMAGE_ERR_ISRUN(R.string.ble_send_image_err_is_run),
+    SEND_OTA_ERR_ISRUN(R.string.ble_send_ota_err_is_run),
+    SEND_FILE_ERR_ISRUN(R.string.ble_send_file_err_is_run),
     ;
     int strId;
     BleStatu(int strId){
