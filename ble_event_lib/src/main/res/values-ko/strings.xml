@@ -34,4 +34,7 @@
     <string name="ble_statu_user_send_image_cmd_index">Bluetooth：cmd 데이터를 전송한다</string>
     <string name="ble_clear_msg">Bluetooth：Clear msg</string>
     <string name="ble_clear_index_msg">Bluetooth：Clear index msg</string>
+    <string name="ble_send_image_err_is_run">Bluetooth：Send image err (thread is run)</string>
+    <string name="ble_send_ota_err_is_run">Bluetooth：Send ota err (thread is run)</string>
+    <string name="ble_send_file_err_is_run">Bluetooth：Send file err (thread is run)</string>
 </resources>
