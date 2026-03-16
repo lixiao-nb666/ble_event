@@ -2,6 +2,7 @@ package com.nrmyw.ble_event_lib.type;
 
 public enum BleSendFileType {
     DEF,
+    IMAGE,
     OTA1,
     OTA2,
     ;
