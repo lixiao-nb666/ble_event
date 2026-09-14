@@ -2,6 +2,7 @@ package com.nrmyw.ble_event_lib.send;//package com.newbee.ble_lib.event.send;
 
 
 
+import com.nrmyw.ble_event_lib.bean.BleDeviceBean;
 import com.nrmyw.ble_event_lib.bean.BleSendFileInfoBean;
 import com.nrmyw.ble_event_lib.bean.BleSendImageInfoBean;
 import com.nrmyw.ble_event_lib.bean.BleSendOtaInfoBean;
@@ -41,4 +42,7 @@ public interface BleEventObserver {
     public void clearMsg();
 
     public void clearIndexMsg();
+
+    public void setDefBleDevice(BleDeviceBean defBleDevice);
+
 }

@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.util.Log;
 
 
+import com.nrmyw.ble_event_lib.bean.BleDeviceBean;
 import com.nrmyw.ble_event_lib.bean.BleSendFileInfoBean;
 import com.nrmyw.ble_event_lib.bean.BleSendImageInfoBean;
 import com.nrmyw.ble_event_lib.bean.BleSendOtaInfoBean;
@@ -113,6 +114,13 @@ public class BleEventSubscriptionSubject implements BleEventSubject {
     public void clearIndexMsg() {
         for (BleEventObserver observer:observers){
             observer.clearIndexMsg();
+        }
+    }
+
+    @Override
+    public void setDefBleDevice(BleDeviceBean defBleDevice) {
+        for (BleEventObserver observer:observers){
+            observer.setDefBleDevice(defBleDevice);
         }
     }
 
