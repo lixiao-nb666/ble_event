@@ -74,6 +74,13 @@ public class BleEventSubscriptionSubject implements BleEventSubject {
     }
 
     @Override
+    public void sendCmdByKStr(String keyStr, byte[] bytes) {
+        for (BleEventObserver observer:observers){
+            observer.sendCmdByKStr(keyStr,bytes);
+        }
+    }
+
+    @Override
     public void sendBytesIndexCmd(int index, byte[] bytes) {
         for (BleEventObserver observer:observers){
             observer.sendBytesIndexCmd(index,bytes);

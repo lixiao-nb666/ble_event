@@ -27,6 +27,8 @@ public interface BleEventObserver {
     //发送字节指令
     public  void sendCmd(byte[] bytes);
 
+    public  void sendCmdByKStr(String keyStr,byte[] bytes);
+
     //发送图标的开始和结束指令，线程自动处理的时候有回调
     public void sendBytesIndexCmd(int index,byte[] bytes);
 
